@@ -1,0 +1,79 @@
+.App {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+  border: 1px solid black;
+  font-family: 'Roboto', sans-serif; /* Added font-family */
+}
+
+.customer-list {
+  flex: 1;
+}
+
+.customer-card {
+  cursor: pointer;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  animation: fade-in 0.5s ease-in-out, scale-up 0.5s ease-in-out;
+}
+
+.customer-card.selected {
+  background-color: #f0f0f0;
+}
+
+.customer-details {
+  flex: 2;
+  margin-left: 50px;
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px 5px; /* Reduced horizontal spacing */
+}
+
+h1 {
+  text-align: center;
+  animation: slide-in 0.5s ease-in-out;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateY(-50px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes scale-up {
+  0% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
